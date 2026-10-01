@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "unicorn", "oxc"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "no-underscore-dangle": [
+      "warn",
+      {
+        "allow": ["__player", "__still"]
+      }
+    ]
+  },
+  "ignorePatterns": ["dist", ".wrangler"]
+}
